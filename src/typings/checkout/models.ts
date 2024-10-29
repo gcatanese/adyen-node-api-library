@@ -87,6 +87,7 @@ export * from './donationCampaign';
 export * from './donationCampaignsRequest';
 export * from './donationCampaignsResponse';
 export * from './donationPaymentRequest';
+export * from './donationPaymentRequestPaymentMethod';
 export * from './donationPaymentResponse';
 export * from './dotpayDetails';
 export * from './dragonpayDetails';
@@ -150,7 +151,9 @@ export * from './paymentMethodsResponse';
 export * from './paymentRefundRequest';
 export * from './paymentRefundResponse';
 export * from './paymentRequest';
+export * from './paymentRequestPaymentMethod';
 export * from './paymentResponse';
+export * from './paymentResponseAction';
 export * from './paymentReversalRequest';
 export * from './paymentReversalResponse';
 export * from './paymentSetupRequest';
@@ -296,6 +299,7 @@ import { DonationCampaign } from './donationCampaign';
 import { DonationCampaignsRequest } from './donationCampaignsRequest';
 import { DonationCampaignsResponse } from './donationCampaignsResponse';
 import { DonationPaymentRequest } from './donationPaymentRequest';
+import { DonationPaymentRequestPaymentMethod } from './donationPaymentRequestPaymentMethod';
 import { DonationPaymentResponse } from './donationPaymentResponse';
 import { DotpayDetails } from './dotpayDetails';
 import { DragonpayDetails } from './dragonpayDetails';
@@ -359,7 +363,9 @@ import { PaymentMethodsResponse } from './paymentMethodsResponse';
 import { PaymentRefundRequest } from './paymentRefundRequest';
 import { PaymentRefundResponse } from './paymentRefundResponse';
 import { PaymentRequest } from './paymentRequest';
+import { PaymentRequestPaymentMethod } from './paymentRequestPaymentMethod';
 import { PaymentResponse } from './paymentResponse';
+import { PaymentResponseAction } from './paymentResponseAction';
 import { PaymentReversalRequest } from './paymentReversalRequest';
 import { PaymentReversalResponse } from './paymentReversalResponse';
 import { PaymentSetupRequest } from './paymentSetupRequest';
@@ -510,6 +516,8 @@ let enumsMap: {[index: string]: any} = {
         "DonationPaymentRequest.ChannelEnum": DonationPaymentRequest.ChannelEnum,
         "DonationPaymentRequest.RecurringProcessingModelEnum": DonationPaymentRequest.RecurringProcessingModelEnum,
         "DonationPaymentRequest.ShopperInteractionEnum": DonationPaymentRequest.ShopperInteractionEnum,
+        "DonationPaymentRequestPaymentMethod.FundingSourceEnum": DonationPaymentRequestPaymentMethod.FundingSourceEnum,
+        "DonationPaymentRequestPaymentMethod.TypeEnum": DonationPaymentRequestPaymentMethod.TypeEnum,
         "DonationPaymentResponse.StatusEnum": DonationPaymentResponse.StatusEnum,
         "DotpayDetails.TypeEnum": DotpayDetails.TypeEnum,
         "DragonpayDetails.TypeEnum": DragonpayDetails.TypeEnum,
@@ -572,7 +580,12 @@ let enumsMap: {[index: string]: any} = {
         "PaymentRequest.IndustryUsageEnum": PaymentRequest.IndustryUsageEnum,
         "PaymentRequest.RecurringProcessingModelEnum": PaymentRequest.RecurringProcessingModelEnum,
         "PaymentRequest.ShopperInteractionEnum": PaymentRequest.ShopperInteractionEnum,
+        "PaymentRequestPaymentMethod.BankAccountTypeEnum": PaymentRequestPaymentMethod.BankAccountTypeEnum,
+        "PaymentRequestPaymentMethod.TypeEnum": PaymentRequestPaymentMethod.TypeEnum,
+        "PaymentRequestPaymentMethod.FundingSourceEnum": PaymentRequestPaymentMethod.FundingSourceEnum,
+        "PaymentRequestPaymentMethod.SubtypeEnum": PaymentRequestPaymentMethod.SubtypeEnum,
         "PaymentResponse.ResultCodeEnum": PaymentResponse.ResultCodeEnum,
+        "PaymentResponseAction.TypeEnum": PaymentResponseAction.TypeEnum,
         "PaymentReversalResponse.StatusEnum": PaymentReversalResponse.StatusEnum,
         "PaymentSetupRequest.ChannelEnum": PaymentSetupRequest.ChannelEnum,
         "PaymentSetupRequest.EntityTypeEnum": PaymentSetupRequest.EntityTypeEnum,
@@ -713,6 +726,7 @@ let typeMap: {[index: string]: any} = {
     "DonationCampaignsRequest": DonationCampaignsRequest,
     "DonationCampaignsResponse": DonationCampaignsResponse,
     "DonationPaymentRequest": DonationPaymentRequest,
+    "DonationPaymentRequestPaymentMethod": DonationPaymentRequestPaymentMethod,
     "DonationPaymentResponse": DonationPaymentResponse,
     "DotpayDetails": DotpayDetails,
     "DragonpayDetails": DragonpayDetails,
@@ -776,7 +790,9 @@ let typeMap: {[index: string]: any} = {
     "PaymentRefundRequest": PaymentRefundRequest,
     "PaymentRefundResponse": PaymentRefundResponse,
     "PaymentRequest": PaymentRequest,
+    "PaymentRequestPaymentMethod": PaymentRequestPaymentMethod,
     "PaymentResponse": PaymentResponse,
+    "PaymentResponseAction": PaymentResponseAction,
     "PaymentReversalRequest": PaymentReversalRequest,
     "PaymentReversalResponse": PaymentReversalResponse,
     "PaymentSetupRequest": PaymentSetupRequest,
