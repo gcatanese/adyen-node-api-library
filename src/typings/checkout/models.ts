@@ -39,18 +39,15 @@ export * from './applePaySessionRequest';
 export * from './applePaySessionResponse';
 export * from './applicationInfo';
 export * from './authenticationData';
-export * from './avs';
 export * from './bacsDirectDebitDetails';
 export * from './balanceCheckRequest';
 export * from './balanceCheckResponse';
-export * from './bankAccount';
 export * from './billDeskDetails';
 export * from './billingAddress';
 export * from './blikDetails';
 export * from './browserInfo';
 export * from './cancelOrderRequest';
 export * from './cancelOrderResponse';
-export * from './card';
 export * from './cardBrandDetails';
 export * from './cardDetails';
 export * from './cardDetailsRequest';
@@ -72,7 +69,6 @@ export * from './checkoutThreeDS2Action';
 export * from './checkoutVoucherAction';
 export * from './commonField';
 export * from './company';
-export * from './configuration';
 export * from './createCheckoutSessionRequest';
 export * from './createCheckoutSessionResponse';
 export * from './createOrderRequest';
@@ -87,9 +83,11 @@ export * from './donationCampaign';
 export * from './donationCampaignsRequest';
 export * from './donationCampaignsResponse';
 export * from './donationPaymentRequest';
+export * from './donationPaymentRequestPaymentMethod';
 export * from './donationPaymentResponse';
 export * from './dotpayDetails';
 export * from './dragonpayDetails';
+export * from './eBankingFinlandDetails';
 export * from './econtextVoucherDetails';
 export * from './eftDetails';
 export * from './encryptedOrderData';
@@ -108,7 +106,6 @@ export * from './idealDonations';
 export * from './inputDetail';
 export * from './installmentOption';
 export * from './installments';
-export * from './installmentsNumber';
 export * from './item';
 export * from './klarnaDetails';
 export * from './lineItem';
@@ -122,6 +119,7 @@ export * from './mobilePayDetails';
 export * from './molPayDetails';
 export * from './name';
 export * from './openInvoiceDetails';
+export * from './payByBankAISDirectDebitDetails';
 export * from './payByBankDetails';
 export * from './payPalDetails';
 export * from './payToDetails';
@@ -150,20 +148,17 @@ export * from './paymentMethodsResponse';
 export * from './paymentRefundRequest';
 export * from './paymentRefundResponse';
 export * from './paymentRequest';
+export * from './paymentRequestPaymentMethod';
 export * from './paymentResponse';
+export * from './paymentResponseAction';
 export * from './paymentReversalRequest';
 export * from './paymentReversalResponse';
-export * from './paymentSetupRequest';
-export * from './paymentSetupResponse';
-export * from './paymentVerificationRequest';
-export * from './paymentVerificationResponse';
 export * from './paypalUpdateOrderRequest';
 export * from './paypalUpdateOrderResponse';
 export * from './phone';
 export * from './platformChargebackLogic';
 export * from './ratepayDetails';
 export * from './recurring';
-export * from './recurringDetail';
 export * from './responseAdditionalData3DSecure';
 export * from './responseAdditionalDataBillingAddress';
 export * from './responseAdditionalDataCard';
@@ -177,18 +172,14 @@ export * from './responsePaymentMethod';
 export * from './riskData';
 export * from './sDKEphemPubKey';
 export * from './samsungPayDetails';
-export * from './secureRemoteCommerceCheckoutData';
 export * from './sepaDirectDebitDetails';
 export * from './serviceError';
-export * from './serviceErrorDetails';
 export * from './sessionResultResponse';
-export * from './shopperInput';
 export * from './shopperInteractionDevice';
 export * from './split';
 export * from './splitAmount';
 export * from './standalonePaymentCancelRequest';
 export * from './standalonePaymentCancelResponse';
-export * from './storedDetails';
 export * from './storedPaymentMethod';
 export * from './storedPaymentMethodDetails';
 export * from './storedPaymentMethodRequest';
@@ -205,6 +196,7 @@ export * from './threeDSRequestData';
 export * from './threeDSRequestorAuthenticationInfo';
 export * from './threeDSRequestorPriorAuthenticationInfo';
 export * from './threeDSecureData';
+export * from './twintDetails';
 export * from './updatePaymentLinkRequest';
 export * from './upiCollectDetails';
 export * from './upiIntentDetails';
@@ -248,18 +240,15 @@ import { ApplePaySessionRequest } from './applePaySessionRequest';
 import { ApplePaySessionResponse } from './applePaySessionResponse';
 import { ApplicationInfo } from './applicationInfo';
 import { AuthenticationData } from './authenticationData';
-import { Avs } from './avs';
 import { BacsDirectDebitDetails } from './bacsDirectDebitDetails';
 import { BalanceCheckRequest } from './balanceCheckRequest';
 import { BalanceCheckResponse } from './balanceCheckResponse';
-import { BankAccount } from './bankAccount';
 import { BillDeskDetails } from './billDeskDetails';
 import { BillingAddress } from './billingAddress';
 import { BlikDetails } from './blikDetails';
 import { BrowserInfo } from './browserInfo';
 import { CancelOrderRequest } from './cancelOrderRequest';
 import { CancelOrderResponse } from './cancelOrderResponse';
-import { Card } from './card';
 import { CardBrandDetails } from './cardBrandDetails';
 import { CardDetails } from './cardDetails';
 import { CardDetailsRequest } from './cardDetailsRequest';
@@ -281,7 +270,6 @@ import { CheckoutThreeDS2Action } from './checkoutThreeDS2Action';
 import { CheckoutVoucherAction } from './checkoutVoucherAction';
 import { CommonField } from './commonField';
 import { Company } from './company';
-import { Configuration } from './configuration';
 import { CreateCheckoutSessionRequest } from './createCheckoutSessionRequest';
 import { CreateCheckoutSessionResponse } from './createCheckoutSessionResponse';
 import { CreateOrderRequest } from './createOrderRequest';
@@ -296,9 +284,11 @@ import { DonationCampaign } from './donationCampaign';
 import { DonationCampaignsRequest } from './donationCampaignsRequest';
 import { DonationCampaignsResponse } from './donationCampaignsResponse';
 import { DonationPaymentRequest } from './donationPaymentRequest';
+import { DonationPaymentRequestPaymentMethod } from './donationPaymentRequestPaymentMethod';
 import { DonationPaymentResponse } from './donationPaymentResponse';
 import { DotpayDetails } from './dotpayDetails';
 import { DragonpayDetails } from './dragonpayDetails';
+import { EBankingFinlandDetails } from './eBankingFinlandDetails';
 import { EcontextVoucherDetails } from './econtextVoucherDetails';
 import { EftDetails } from './eftDetails';
 import { EncryptedOrderData } from './encryptedOrderData';
@@ -317,7 +307,6 @@ import { IdealDonations } from './idealDonations';
 import { InputDetail } from './inputDetail';
 import { InstallmentOption } from './installmentOption';
 import { Installments } from './installments';
-import { InstallmentsNumber } from './installmentsNumber';
 import { Item } from './item';
 import { KlarnaDetails } from './klarnaDetails';
 import { LineItem } from './lineItem';
@@ -331,6 +320,7 @@ import { MobilePayDetails } from './mobilePayDetails';
 import { MolPayDetails } from './molPayDetails';
 import { Name } from './name';
 import { OpenInvoiceDetails } from './openInvoiceDetails';
+import { PayByBankAISDirectDebitDetails } from './payByBankAISDirectDebitDetails';
 import { PayByBankDetails } from './payByBankDetails';
 import { PayPalDetails } from './payPalDetails';
 import { PayToDetails } from './payToDetails';
@@ -359,20 +349,17 @@ import { PaymentMethodsResponse } from './paymentMethodsResponse';
 import { PaymentRefundRequest } from './paymentRefundRequest';
 import { PaymentRefundResponse } from './paymentRefundResponse';
 import { PaymentRequest } from './paymentRequest';
+import { PaymentRequestPaymentMethod } from './paymentRequestPaymentMethod';
 import { PaymentResponse } from './paymentResponse';
+import { PaymentResponseAction } from './paymentResponseAction';
 import { PaymentReversalRequest } from './paymentReversalRequest';
 import { PaymentReversalResponse } from './paymentReversalResponse';
-import { PaymentSetupRequest } from './paymentSetupRequest';
-import { PaymentSetupResponse } from './paymentSetupResponse';
-import { PaymentVerificationRequest } from './paymentVerificationRequest';
-import { PaymentVerificationResponse } from './paymentVerificationResponse';
 import { PaypalUpdateOrderRequest } from './paypalUpdateOrderRequest';
 import { PaypalUpdateOrderResponse } from './paypalUpdateOrderResponse';
 import { Phone } from './phone';
 import { PlatformChargebackLogic } from './platformChargebackLogic';
 import { RatepayDetails } from './ratepayDetails';
 import { Recurring } from './recurring';
-import { RecurringDetail } from './recurringDetail';
 import { ResponseAdditionalData3DSecure } from './responseAdditionalData3DSecure';
 import { ResponseAdditionalDataBillingAddress } from './responseAdditionalDataBillingAddress';
 import { ResponseAdditionalDataCard } from './responseAdditionalDataCard';
@@ -386,18 +373,14 @@ import { ResponsePaymentMethod } from './responsePaymentMethod';
 import { RiskData } from './riskData';
 import { SDKEphemPubKey } from './sDKEphemPubKey';
 import { SamsungPayDetails } from './samsungPayDetails';
-import { SecureRemoteCommerceCheckoutData } from './secureRemoteCommerceCheckoutData';
 import { SepaDirectDebitDetails } from './sepaDirectDebitDetails';
 import { ServiceError } from './serviceError';
-import { ServiceErrorDetails } from './serviceErrorDetails';
 import { SessionResultResponse } from './sessionResultResponse';
-import { ShopperInput } from './shopperInput';
 import { ShopperInteractionDevice } from './shopperInteractionDevice';
 import { Split } from './split';
 import { SplitAmount } from './splitAmount';
 import { StandalonePaymentCancelRequest } from './standalonePaymentCancelRequest';
 import { StandalonePaymentCancelResponse } from './standalonePaymentCancelResponse';
-import { StoredDetails } from './storedDetails';
 import { StoredPaymentMethod } from './storedPaymentMethod';
 import { StoredPaymentMethodDetails } from './storedPaymentMethodDetails';
 import { StoredPaymentMethodRequest } from './storedPaymentMethodRequest';
@@ -414,6 +397,7 @@ import { ThreeDSRequestData } from './threeDSRequestData';
 import { ThreeDSRequestorAuthenticationInfo } from './threeDSRequestorAuthenticationInfo';
 import { ThreeDSRequestorPriorAuthenticationInfo } from './threeDSRequestorPriorAuthenticationInfo';
 import { ThreeDSecureData } from './threeDSecureData';
+import { TwintDetails } from './twintDetails';
 import { UpdatePaymentLinkRequest } from './updatePaymentLinkRequest';
 import { UpiCollectDetails } from './upiCollectDetails';
 import { UpiIntentDetails } from './upiIntentDetails';
@@ -464,7 +448,6 @@ let enumsMap: {[index: string]: any} = {
         "ApplePayDonations.FundingSourceEnum": ApplePayDonations.FundingSourceEnum,
         "ApplePayDonations.TypeEnum": ApplePayDonations.TypeEnum,
         "AuthenticationData.AttemptAuthenticationEnum": AuthenticationData.AttemptAuthenticationEnum,
-        "Avs.EnabledEnum": Avs.EnabledEnum,
         "BacsDirectDebitDetails.TypeEnum": BacsDirectDebitDetails.TypeEnum,
         "BalanceCheckRequest.RecurringProcessingModelEnum": BalanceCheckRequest.RecurringProcessingModelEnum,
         "BalanceCheckRequest.ShopperInteractionEnum": BalanceCheckRequest.ShopperInteractionEnum,
@@ -489,7 +472,6 @@ let enumsMap: {[index: string]: any} = {
         "CheckoutSessionThreeDS2RequestData.ThreeDSRequestorChallengeIndEnum": CheckoutSessionThreeDS2RequestData.ThreeDSRequestorChallengeIndEnum,
         "CheckoutThreeDS2Action.TypeEnum": CheckoutThreeDS2Action.TypeEnum,
         "CheckoutVoucherAction.TypeEnum": CheckoutVoucherAction.TypeEnum,
-        "Configuration.CardHolderNameEnum": Configuration.CardHolderNameEnum,
         "CreateCheckoutSessionRequest.ChannelEnum": CreateCheckoutSessionRequest.ChannelEnum,
         "CreateCheckoutSessionRequest.ModeEnum": CreateCheckoutSessionRequest.ModeEnum,
         "CreateCheckoutSessionRequest.RecurringProcessingModelEnum": CreateCheckoutSessionRequest.RecurringProcessingModelEnum,
@@ -510,9 +492,12 @@ let enumsMap: {[index: string]: any} = {
         "DonationPaymentRequest.ChannelEnum": DonationPaymentRequest.ChannelEnum,
         "DonationPaymentRequest.RecurringProcessingModelEnum": DonationPaymentRequest.RecurringProcessingModelEnum,
         "DonationPaymentRequest.ShopperInteractionEnum": DonationPaymentRequest.ShopperInteractionEnum,
+        "DonationPaymentRequestPaymentMethod.FundingSourceEnum": DonationPaymentRequestPaymentMethod.FundingSourceEnum,
+        "DonationPaymentRequestPaymentMethod.TypeEnum": DonationPaymentRequestPaymentMethod.TypeEnum,
         "DonationPaymentResponse.StatusEnum": DonationPaymentResponse.StatusEnum,
         "DotpayDetails.TypeEnum": DotpayDetails.TypeEnum,
         "DragonpayDetails.TypeEnum": DragonpayDetails.TypeEnum,
+        "EBankingFinlandDetails.TypeEnum": EBankingFinlandDetails.TypeEnum,
         "EcontextVoucherDetails.TypeEnum": EcontextVoucherDetails.TypeEnum,
         "EftDetails.TypeEnum": EftDetails.TypeEnum,
         "FundRecipient.WalletPurposeEnum": FundRecipient.WalletPurposeEnum,
@@ -538,6 +523,7 @@ let enumsMap: {[index: string]: any} = {
         "MobilePayDetails.TypeEnum": MobilePayDetails.TypeEnum,
         "MolPayDetails.TypeEnum": MolPayDetails.TypeEnum,
         "OpenInvoiceDetails.TypeEnum": OpenInvoiceDetails.TypeEnum,
+        "PayByBankAISDirectDebitDetails.TypeEnum": PayByBankAISDirectDebitDetails.TypeEnum,
         "PayByBankDetails.TypeEnum": PayByBankDetails.TypeEnum,
         "PayPalDetails.SubtypeEnum": PayPalDetails.SubtypeEnum,
         "PayPalDetails.TypeEnum": PayPalDetails.TypeEnum,
@@ -572,28 +558,24 @@ let enumsMap: {[index: string]: any} = {
         "PaymentRequest.IndustryUsageEnum": PaymentRequest.IndustryUsageEnum,
         "PaymentRequest.RecurringProcessingModelEnum": PaymentRequest.RecurringProcessingModelEnum,
         "PaymentRequest.ShopperInteractionEnum": PaymentRequest.ShopperInteractionEnum,
+        "PaymentRequestPaymentMethod.BankAccountTypeEnum": PaymentRequestPaymentMethod.BankAccountTypeEnum,
+        "PaymentRequestPaymentMethod.TypeEnum": PaymentRequestPaymentMethod.TypeEnum,
+        "PaymentRequestPaymentMethod.FundingSourceEnum": PaymentRequestPaymentMethod.FundingSourceEnum,
         "PaymentResponse.ResultCodeEnum": PaymentResponse.ResultCodeEnum,
+        "PaymentResponseAction.TypeEnum": PaymentResponseAction.TypeEnum,
         "PaymentReversalResponse.StatusEnum": PaymentReversalResponse.StatusEnum,
-        "PaymentSetupRequest.ChannelEnum": PaymentSetupRequest.ChannelEnum,
-        "PaymentSetupRequest.EntityTypeEnum": PaymentSetupRequest.EntityTypeEnum,
-        "PaymentSetupRequest.ShopperInteractionEnum": PaymentSetupRequest.ShopperInteractionEnum,
-        "PaymentVerificationResponse.ResultCodeEnum": PaymentVerificationResponse.ResultCodeEnum,
         "PaypalUpdateOrderResponse.StatusEnum": PaypalUpdateOrderResponse.StatusEnum,
         "PlatformChargebackLogic.BehaviorEnum": PlatformChargebackLogic.BehaviorEnum,
         "RatepayDetails.TypeEnum": RatepayDetails.TypeEnum,
         "Recurring.ContractEnum": Recurring.ContractEnum,
         "Recurring.TokenServiceEnum": Recurring.TokenServiceEnum,
-        "RecurringDetail.FundingSourceEnum": RecurringDetail.FundingSourceEnum,
+        "ResponseAdditionalDataCard.CardProductIdEnum": ResponseAdditionalDataCard.CardProductIdEnum,
         "ResponseAdditionalDataCommon.FraudResultTypeEnum": ResponseAdditionalDataCommon.FraudResultTypeEnum,
         "ResponseAdditionalDataCommon.RecurringProcessingModelEnum": ResponseAdditionalDataCommon.RecurringProcessingModelEnum,
         "SamsungPayDetails.FundingSourceEnum": SamsungPayDetails.FundingSourceEnum,
         "SamsungPayDetails.TypeEnum": SamsungPayDetails.TypeEnum,
-        "SecureRemoteCommerceCheckoutData.SchemeEnum": SecureRemoteCommerceCheckoutData.SchemeEnum,
         "SepaDirectDebitDetails.TypeEnum": SepaDirectDebitDetails.TypeEnum,
         "SessionResultResponse.StatusEnum": SessionResultResponse.StatusEnum,
-        "ShopperInput.BillingAddressEnum": ShopperInput.BillingAddressEnum,
-        "ShopperInput.DeliveryAddressEnum": ShopperInput.DeliveryAddressEnum,
-        "ShopperInput.PersonalDetailsEnum": ShopperInput.PersonalDetailsEnum,
         "Split.TypeEnum": Split.TypeEnum,
         "StandalonePaymentCancelResponse.StatusEnum": StandalonePaymentCancelResponse.StatusEnum,
         "StoredPaymentMethodDetails.TypeEnum": StoredPaymentMethodDetails.TypeEnum,
@@ -622,6 +604,7 @@ let enumsMap: {[index: string]: any} = {
         "ThreeDSecureData.AuthenticationResponseEnum": ThreeDSecureData.AuthenticationResponseEnum,
         "ThreeDSecureData.ChallengeCancelEnum": ThreeDSecureData.ChallengeCancelEnum,
         "ThreeDSecureData.DirectoryResponseEnum": ThreeDSecureData.DirectoryResponseEnum,
+        "TwintDetails.TypeEnum": TwintDetails.TypeEnum,
         "UpdatePaymentLinkRequest.StatusEnum": UpdatePaymentLinkRequest.StatusEnum,
         "UpiCollectDetails.TypeEnum": UpiCollectDetails.TypeEnum,
         "UpiIntentDetails.TypeEnum": UpiIntentDetails.TypeEnum,
@@ -665,18 +648,15 @@ let typeMap: {[index: string]: any} = {
     "ApplePaySessionResponse": ApplePaySessionResponse,
     "ApplicationInfo": ApplicationInfo,
     "AuthenticationData": AuthenticationData,
-    "Avs": Avs,
     "BacsDirectDebitDetails": BacsDirectDebitDetails,
     "BalanceCheckRequest": BalanceCheckRequest,
     "BalanceCheckResponse": BalanceCheckResponse,
-    "BankAccount": BankAccount,
     "BillDeskDetails": BillDeskDetails,
     "BillingAddress": BillingAddress,
     "BlikDetails": BlikDetails,
     "BrowserInfo": BrowserInfo,
     "CancelOrderRequest": CancelOrderRequest,
     "CancelOrderResponse": CancelOrderResponse,
-    "Card": Card,
     "CardBrandDetails": CardBrandDetails,
     "CardDetails": CardDetails,
     "CardDetailsRequest": CardDetailsRequest,
@@ -698,7 +678,6 @@ let typeMap: {[index: string]: any} = {
     "CheckoutVoucherAction": CheckoutVoucherAction,
     "CommonField": CommonField,
     "Company": Company,
-    "Configuration": Configuration,
     "CreateCheckoutSessionRequest": CreateCheckoutSessionRequest,
     "CreateCheckoutSessionResponse": CreateCheckoutSessionResponse,
     "CreateOrderRequest": CreateOrderRequest,
@@ -713,9 +692,11 @@ let typeMap: {[index: string]: any} = {
     "DonationCampaignsRequest": DonationCampaignsRequest,
     "DonationCampaignsResponse": DonationCampaignsResponse,
     "DonationPaymentRequest": DonationPaymentRequest,
+    "DonationPaymentRequestPaymentMethod": DonationPaymentRequestPaymentMethod,
     "DonationPaymentResponse": DonationPaymentResponse,
     "DotpayDetails": DotpayDetails,
     "DragonpayDetails": DragonpayDetails,
+    "EBankingFinlandDetails": EBankingFinlandDetails,
     "EcontextVoucherDetails": EcontextVoucherDetails,
     "EftDetails": EftDetails,
     "EncryptedOrderData": EncryptedOrderData,
@@ -734,7 +715,6 @@ let typeMap: {[index: string]: any} = {
     "InputDetail": InputDetail,
     "InstallmentOption": InstallmentOption,
     "Installments": Installments,
-    "InstallmentsNumber": InstallmentsNumber,
     "Item": Item,
     "KlarnaDetails": KlarnaDetails,
     "LineItem": LineItem,
@@ -748,6 +728,7 @@ let typeMap: {[index: string]: any} = {
     "MolPayDetails": MolPayDetails,
     "Name": Name,
     "OpenInvoiceDetails": OpenInvoiceDetails,
+    "PayByBankAISDirectDebitDetails": PayByBankAISDirectDebitDetails,
     "PayByBankDetails": PayByBankDetails,
     "PayPalDetails": PayPalDetails,
     "PayToDetails": PayToDetails,
@@ -776,20 +757,17 @@ let typeMap: {[index: string]: any} = {
     "PaymentRefundRequest": PaymentRefundRequest,
     "PaymentRefundResponse": PaymentRefundResponse,
     "PaymentRequest": PaymentRequest,
+    "PaymentRequestPaymentMethod": PaymentRequestPaymentMethod,
     "PaymentResponse": PaymentResponse,
+    "PaymentResponseAction": PaymentResponseAction,
     "PaymentReversalRequest": PaymentReversalRequest,
     "PaymentReversalResponse": PaymentReversalResponse,
-    "PaymentSetupRequest": PaymentSetupRequest,
-    "PaymentSetupResponse": PaymentSetupResponse,
-    "PaymentVerificationRequest": PaymentVerificationRequest,
-    "PaymentVerificationResponse": PaymentVerificationResponse,
     "PaypalUpdateOrderRequest": PaypalUpdateOrderRequest,
     "PaypalUpdateOrderResponse": PaypalUpdateOrderResponse,
     "Phone": Phone,
     "PlatformChargebackLogic": PlatformChargebackLogic,
     "RatepayDetails": RatepayDetails,
     "Recurring": Recurring,
-    "RecurringDetail": RecurringDetail,
     "ResponseAdditionalData3DSecure": ResponseAdditionalData3DSecure,
     "ResponseAdditionalDataBillingAddress": ResponseAdditionalDataBillingAddress,
     "ResponseAdditionalDataCard": ResponseAdditionalDataCard,
@@ -803,18 +781,14 @@ let typeMap: {[index: string]: any} = {
     "RiskData": RiskData,
     "SDKEphemPubKey": SDKEphemPubKey,
     "SamsungPayDetails": SamsungPayDetails,
-    "SecureRemoteCommerceCheckoutData": SecureRemoteCommerceCheckoutData,
     "SepaDirectDebitDetails": SepaDirectDebitDetails,
     "ServiceError": ServiceError,
-    "ServiceErrorDetails": ServiceErrorDetails,
     "SessionResultResponse": SessionResultResponse,
-    "ShopperInput": ShopperInput,
     "ShopperInteractionDevice": ShopperInteractionDevice,
     "Split": Split,
     "SplitAmount": SplitAmount,
     "StandalonePaymentCancelRequest": StandalonePaymentCancelRequest,
     "StandalonePaymentCancelResponse": StandalonePaymentCancelResponse,
-    "StoredDetails": StoredDetails,
     "StoredPaymentMethod": StoredPaymentMethod,
     "StoredPaymentMethodDetails": StoredPaymentMethodDetails,
     "StoredPaymentMethodRequest": StoredPaymentMethodRequest,
@@ -831,6 +805,7 @@ let typeMap: {[index: string]: any} = {
     "ThreeDSRequestorAuthenticationInfo": ThreeDSRequestorAuthenticationInfo,
     "ThreeDSRequestorPriorAuthenticationInfo": ThreeDSRequestorPriorAuthenticationInfo,
     "ThreeDSecureData": ThreeDSecureData,
+    "TwintDetails": TwintDetails,
     "UpdatePaymentLinkRequest": UpdatePaymentLinkRequest,
     "UpiCollectDetails": UpiCollectDetails,
     "UpiIntentDetails": UpiIntentDetails,

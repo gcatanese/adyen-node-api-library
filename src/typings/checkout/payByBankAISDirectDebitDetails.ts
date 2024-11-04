@@ -8,7 +8,7 @@
  */
 
 
-export class VippsDetails {
+export class PayByBankAISDirectDebitDetails {
     /**
     * The checkout attempt identifier.
     */
@@ -25,13 +25,9 @@ export class VippsDetails {
     */
     'storedPaymentMethodId'?: string;
     /**
-    * 
+    * **paybybank_**
     */
-    'telephoneNumber': string;
-    /**
-    * **vipps**
-    */
-    'type'?: VippsDetails.TypeEnum;
+    'type': PayByBankAISDirectDebitDetails.TypeEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -52,23 +48,18 @@ export class VippsDetails {
             "type": "string"
         },
         {
-            "name": "telephoneNumber",
-            "baseName": "telephoneNumber",
-            "type": "string"
-        },
-        {
             "name": "type",
             "baseName": "type",
-            "type": "VippsDetails.TypeEnum"
+            "type": "PayByBankAISDirectDebitDetails.TypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return VippsDetails.attributeTypeMap;
+        return PayByBankAISDirectDebitDetails.attributeTypeMap;
     }
 }
 
-export namespace VippsDetails {
+export namespace PayByBankAISDirectDebitDetails {
     export enum TypeEnum {
-        Vipps = 'vipps'
+        PaybybankAisDd = 'paybybank_AIS_DD'
     }
 }

@@ -8,7 +8,7 @@
  */
 
 
-export class VippsDetails {
+export class TwintDetails {
     /**
     * The checkout attempt identifier.
     */
@@ -25,13 +25,13 @@ export class VippsDetails {
     */
     'storedPaymentMethodId'?: string;
     /**
-    * 
+    * The type of flow to initiate.
     */
-    'telephoneNumber': string;
+    'subtype'?: string;
     /**
-    * **vipps**
+    * The payment method type.
     */
-    'type'?: VippsDetails.TypeEnum;
+    'type'?: TwintDetails.TypeEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -52,23 +52,23 @@ export class VippsDetails {
             "type": "string"
         },
         {
-            "name": "telephoneNumber",
-            "baseName": "telephoneNumber",
+            "name": "subtype",
+            "baseName": "subtype",
             "type": "string"
         },
         {
             "name": "type",
             "baseName": "type",
-            "type": "VippsDetails.TypeEnum"
+            "type": "TwintDetails.TypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return VippsDetails.attributeTypeMap;
+        return TwintDetails.attributeTypeMap;
     }
 }
 
-export namespace VippsDetails {
+export namespace TwintDetails {
     export enum TypeEnum {
-        Vipps = 'vipps'
+        Twint = 'twint'
     }
 }

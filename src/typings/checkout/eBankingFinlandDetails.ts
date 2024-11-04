@@ -8,23 +8,19 @@
  */
 
 
-export class MbwayDetails {
+export class EBankingFinlandDetails {
     /**
     * The checkout attempt identifier.
     */
     'checkoutAttemptId'?: string;
     /**
-    * 
+    * The Ebanking Finland issuer value of the shopper\'s selected bank.
     */
-    'shopperEmail': string;
+    'issuer'?: string;
     /**
-    * 
+    * **ebanking_FI**
     */
-    'telephoneNumber': string;
-    /**
-    * **mbway**
-    */
-    'type'?: MbwayDetails.TypeEnum;
+    'type': EBankingFinlandDetails.TypeEnum;
 
     static discriminator: string | undefined = undefined;
 
@@ -35,28 +31,23 @@ export class MbwayDetails {
             "type": "string"
         },
         {
-            "name": "shopperEmail",
-            "baseName": "shopperEmail",
-            "type": "string"
-        },
-        {
-            "name": "telephoneNumber",
-            "baseName": "telephoneNumber",
+            "name": "issuer",
+            "baseName": "issuer",
             "type": "string"
         },
         {
             "name": "type",
             "baseName": "type",
-            "type": "MbwayDetails.TypeEnum"
+            "type": "EBankingFinlandDetails.TypeEnum"
         }    ];
 
     static getAttributeTypeMap() {
-        return MbwayDetails.attributeTypeMap;
+        return EBankingFinlandDetails.attributeTypeMap;
     }
 }
 
-export namespace MbwayDetails {
+export namespace EBankingFinlandDetails {
     export enum TypeEnum {
-        Mbway = 'mbway'
+        EbankingFi = 'ebanking_FI'
     }
 }
